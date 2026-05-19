@@ -32,7 +32,22 @@
         <div class="col">
           <h1><strong>Produkt 1</strong></h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.</p>
-          <a href="#" class="btn bg-secondary text-light" style="border-bottom-left-radius: 15px; ">Lägg till i kundvagn</a>
+                    <button href="#" class="btn bg-secondary text-light" style="border-bottom-left-radius: 15px;" onclick="showAlert();">Lägg till i kundvagn</button>
+          <div id="alertBox" class="alert alert-danger bg-warning text-light d-none mt-4" role="alert">
+            Funktionen är inte tillgänglig i demo-versionen.
+                <button type="button" class="btn btn-sm float-end" onclick="closeAlert()">
+              ✕  
+                </button>
+          </div>
+          <script>
+              function showAlert() {
+              document.getElementById("alertBox").classList.remove("d-none");
+              }
+
+              function closeAlert() {
+              document.getElementById("alertBox").classList.add("d-none");
+              }
+            </script>
         </div>
         <div class="col">
           <img src="assets/img_9334.jpeg" alt="Produkt 1" style="width: 100%; height: auto; border-radius: 20px;">
